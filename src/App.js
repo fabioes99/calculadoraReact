@@ -4,6 +4,8 @@ import { Backspace, Radical } from 'phosphor-react'
 import { Container, Content, Row } from './styles';
 import { useState } from 'react';
 import ButtonSVG from './components/ButtonSvg';
+import HoverCardDemo from './components/HoverCard';
+
 
 const App = () => {
   const [result, setResult] = useState('');
@@ -38,11 +40,17 @@ const App = () => {
   };
 
   const handleSquare = () => {
-    setResult(String(Math.sqrt(result)));
+    const apenasNumeros = /^\d+$/;
+    if( apenasNumeros.test(String(result)) ){
+      setResult(String(Math.sqrt(result)));
+    }else
+      setResult('ERRO');
+    
   };
 
   return (
     <Container>
+      <HoverCardDemo />
       <Content>
         <Input value={result} />
         <Row>
