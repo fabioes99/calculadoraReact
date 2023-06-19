@@ -7,7 +7,7 @@ const HoverCardDemo = () => (
     <HoverCard.Trigger className="Trigger" asChild>
       <a
         className="ImageTrigger"
-        href="https://twitter.com/radix_ui"
+        href="https://github.com/fabioes99"
         target="_blank"
         rel="noreferrer noopener"
       >
